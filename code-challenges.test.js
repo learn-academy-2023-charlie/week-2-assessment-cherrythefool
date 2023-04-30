@@ -169,13 +169,13 @@ const vowels = ["a", "e", "i", "o", "u"]
 //     }
 // }
 
-const firstVowel = (string) => {
-    for (let i = 0; i < string.length; i++) {
-        if (vowels.includes(string[i])) {
-            return i
-        }
-    }
-}
+// const firstVowel = (string) => {
+//     for (let i = 0; i < string.length; i++) {
+//         if (vowels.includes(string[i])) {
+//             return i
+//         }
+//     }
+// }
 
 // ✓ returns the index location of the first value in the input string (1 ms)
 
@@ -184,3 +184,12 @@ const firstVowel = (string) => {
 //I feel like most of these options had some merit if I'd stuck with it, but I needed a break and to come back to it to actually get there. 
 
 //Refactor: geeze louise I don't want to touch it again, but there's probably a pretty straightforward way to stick it in a filter
+
+// K I really wanted to figure out the filter so I closed my pull request and I'm BACK 
+
+const firstVowel = (string) => {
+    const index = string.split("").findIndex((char) => vowels.includes(char))
+return index
+}
+//heyooooo nice! okay so filter didn't work but I did find findIndex which essentially does what I was trying to do with filter
+//  ✓ returns the index location of the first value in the input string
