@@ -100,6 +100,8 @@ const vowelTester3 = "challenges"
 
 // b) Create the function that makes the test pass.
 
+//Scroll all the way down for solution! I left a mess here because I tried a bunch of different things, thoughts interspersed
+
 //I tussled with this one for a while! I was trying to return the lowest value of string.indexOf(vowel), and it took three different sets of code to realize that the vowels not in the tested word were returning -1 so the whole thing was giving me -1 back for each tested word
 
 //first attempt
@@ -136,12 +138,12 @@ const vowelTester3 = "challenges"
     //     return ("You found an edge case!")
     // }
 
-
-const firstVowel = (string) => {
-    return string.indexOf(["a", "e", "i", "o", "u"].filter((vowel) => string.includes(vowel)))
-    }
-
-
+const vowels = ["a", "e", "i", "o", "u"]
+// const firstVowel = (string) => {
+//     vowels.filter((value) => string.includes(value)) {
+//         return string.indexOf()
+//     }
+// }
     // return Math.min(string.indexOf(string.includes(value) => value in vowels))
     // }
 
@@ -161,3 +163,24 @@ const firstVowel = (string) => {
     //     }
     //   }
 
+// const firstVowel = (string) => {
+//     if (string.indexOf(vowels) !== -1){
+//         return Math.min(string.indexOf(vowels))
+//     }
+// }
+
+const firstVowel = (string) => {
+    for (let i = 0; i < string.length; i++) {
+        if (vowels.includes(string[i])) {
+            return i
+        }
+    }
+}
+
+// ✓ returns the index location of the first value in the input string (1 ms)
+
+//YESSSSSSSS!!!!!! finally! green, complete!
+
+//I feel like most of these options had some merit if I'd stuck with it, but I needed a break and to come back to it to actually get there. 
+
+//Refactor: geeze louise I don't want to touch it again, but there's probably a pretty straightforward way to stick it in a filter
