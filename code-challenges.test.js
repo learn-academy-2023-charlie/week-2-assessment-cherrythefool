@@ -114,7 +114,8 @@ const vowelTester3 = "challenges"
 //second attempt
 // return Math.min(string.indexOf("a"), string.indexOf("e"), string.indexOf("i"), string.indexOf("o"), string.indexOf("u"))
 
-//third attempt, with copious console logging - kept getting back "you got an edge case" and finally had an "aha!" moment
+//third attempt, with copious console logging - kept getting back "you got an edge case" and finally had an "aha!" moment. This was mostly to parse out all the logic and see what was happening - dropped a bunch of console.logs in throughout to figure out that I was getting -1 becase it always doesn't include at least one value
+
     // console.log(string.indexOf("o"));
     // if (string.indexOf("a") < string.indexOf("e") && string.indexOf("a") < string.indexOf("i") && string.indexOf("a") < string.indexOf("o") && string.indexOf("a") < string.indexOf("u")){
     //     return string.indexOf("a")
@@ -135,11 +136,10 @@ const vowelTester3 = "challenges"
     //     return ("You found an edge case!")
     // }
 
-const vowels = ["a", "e", "i", "o", "u"]
 
-const firstVowel =
-    vowels.filter(vowels => string.includes(vowels))
-    return string.indexOf(firstVowel)
+const firstVowel = (string) => {
+    return string.indexOf(["a", "e", "i", "o", "u"].filter((vowel) => string.includes(vowel)))
+    }
 
 
     // return Math.min(string.indexOf(string.includes(value) => value in vowels))
